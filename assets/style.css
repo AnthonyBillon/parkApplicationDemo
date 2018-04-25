@@ -1,0 +1,174 @@
+header {
+    height: 400px;
+    margin-bottom: 20px;
+    background-image: url("images/bg.jpg.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+    -webkit-box-shadow: inset 0px -61px 45px -50px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: inset 0px -61px 45px -50px rgba(0, 0, 0, 0.59);
+    box-shadow: inset 0px -61px 45px -50px rgba(0, 0, 0, 0.59);
+}
+
+.in-head {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+h1 {
+    font-size: 11vw;
+    text-align: center;
+}
+
+#search-parking {
+    margin-bottom: 20px;
+}
+
+.btn-sib {
+    margin: 0 2px;
+    font-size: 20px;
+}
+
+.selector {
+    min-width: 90px;
+    border-radius: 4px;
+    overflow: hidden;
+
+}
+
+.selector-type {
+
+    background-color: #212529;
+    padding: 4px;
+    min-width: 40px;
+    text-align: center;
+    width: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 36px;
+    transition: background-color 500ms;
+}
+
+.selector-type-selected {
+    background-color: #007bff;
+}
+
+/*.selector-type:focus {*/
+/*border: #80bdff 5px solid;*/
+/*}*/
+
+/*.selector-type-selected:focus{*/
+/*border: #80bdff 5px solid;*/
+/*}*/
+
+#notification-zone {
+    position: fixed;
+    top: 25px;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+footer {
+    height: 150px;
+}
+
+.notification {
+    opacity: 0;
+    margin: 10px;
+    line-height: 250%;
+    border-radius: 4px;
+    padding: 0 20px;
+    color: white;
+    transition-duration: 500ms;
+    -webkit-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+table > * {
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.md-light {
+    color: white;
+}
+
+#form{
+    margin-top: 50px;
+}
+.gestion{
+    text-align: right;
+}
+
+
+
+.type-e{
+    width: 12%;
+}
+.loc-e{
+    width: 20%;
+}
+.mail-e{
+    width: 25%;
+}
+.gestion{
+    width: 10%;
+}
+.nbplaces{
+    width: 10%;
+}
+
+.nom-e{
+    width: 16%;
+}
+
+
+
+@media screen and (max-width: 991px) {
+    td {
+        display: block;
+        border-top: 0;
+        width: auto;
+    }
+
+    .type-e{
+        width: initial;;
+    }
+    .loc-e{
+        width: initial;
+    }
+    .mail-e{
+        width: initial;
+    }
+    .gestion{
+        width: initial;
+    }
+    .nbplaces{
+        width: initial;
+    }
+
+    .nom-e{
+        width: initial;
+    }
+
+
+    .nbplaces:after {
+        content: ' places';
+        display: inline;
+    }
+
+
+    thead {
+        display: none;
+    }
+    .gestion{
+        text-align: left;
+    }
+}

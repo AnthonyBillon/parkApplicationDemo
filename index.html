@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<!-- Anthony Billon 11710593  -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <title>Parkcenter</title>
+</head>
+<body>
+<header class="">
+    <div class="container in-head">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+                <h1>Parkcenter</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div id="parkings">
+                <h2>Tableau des parkings</h2>
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Liste des parkings
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <div>
+                                    <input type="text" placeholder="Rechercher..." class="form-control" id="search-parking">
+                                </div>
+                                <div>
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Localisation</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Gestion</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="content-tab">
+
+                                    </tbody>
+                                </table>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <div id="form">
+                <h2>Ajouter un parking</h2>
+                <!--
+                                (nom, type de véhicules, coordonnées GPS, nombre de places, email responsable, système de comptage)
+                -->
+                    <form id="in-form">
+                        <div class="form-row">
+                            <div class="form-group col-md-9">
+                                <label for="nom">Nom</label>
+                                <input type="text" class="form-control" id="nom" placeholder="Nom" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label >Type de véhicule</label>
+<!--
+                                <div class="selector"><div class="selector-type selector-type-selected" data-type="Voiture" tabindex="0"><img src="assets/images/ic_directions_car_white_24dp_2x.png" alt="voiture"></div><div class="selector-type" data-type="Vélo" tabindex="0"><img src="assets/images/ic_directions_bike_white_24dp_2x.png" alt="vélo"></div></div>
+-->
+                                <div id="form-selector"></div>
+<!--
+                                <input type="hidden" class="form-control" id="inputType" value="voiture">
+-->
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-10">
+                                <label for="localisation">Localisation</label>
+                                <input type="text" class="form-control" id="localisation"
+                                       placeholder="1.1111556, 1.55533" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="nbPlace">Nombre</label>
+                                <input type="number" class="form-control" id="nbPlace"
+                                       placeholder="nombre" min="1" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="email">Email du responsable</label>
+                                <input autocomplete="email" type="email" class="form-control" id="email" placeholder="xyz@example.com" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                    </form>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+
+</footer>
+
+<div id="notification-zone"></div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
